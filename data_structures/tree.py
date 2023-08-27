@@ -1,6 +1,4 @@
-from Nodes import TreeNode, NodeOperations
-
-op = NodeOperations()
+from nodes import TreeNode, NodeOperations
 
 class Tree(object):
     def __init__(self, nums):
@@ -46,7 +44,7 @@ class Tree(object):
             lastNode = self.findLastNode(self.root)
 
             # Swap (last node will contain delete val)
-            op.swap(lastNode, deleteNode)
+            NodeOperations.swap(lastNode, deleteNode)
 
             # Delete
             if parentNode.left is lastNode:
@@ -125,62 +123,3 @@ class Tree(object):
                     return rightSideSearch
         
         return None
-
-class Heap(Tree):
-    def insert(self, val):
-        super().insert(val)
-        #self.heapifyMax(self.root)
-        #self.heapifyMin(self.root)
-    
-    def delete(self, val):
-        super().delete(val)
-        #self.heapifyMax(self.root)
-        #self.heapifyMin(self.root)
-
-    # Sort until largest is on top
-    def heapifyMax(self, node):
-        if node is not None:
-            self.heapifyMax(node.left)
-            self.heapifyMax(node.right)
-
-            if node.hasChildren():
-                largestChild = max(node.left.data, node.right.data)
-                if largestChild > node.data:
-                    if largestChild == node.left.data:
-                        op.swap(node, node.left)
-                        self.heapifyMax(node.left)
-                    elif largestChild == node.right.data:
-                        op.swap(node, node.right)
-                        self.heapifyMax(node.right)
-            elif node.hasLeftChild():
-                if node.data < node.left.data:
-                    op.swap(node, node.left)
-                    self.heapifyMax(node.left)
-            elif node.hasRightChild():
-                if node.data < node.right.data:
-                    op.swap(node, node.right)
-                    self.heapifyMax(node.right)
-
-    # Sort until smallest is on top
-    def heapifyMin(self, node):
-        if node is not None:
-            self.heapifyMin(node.left)
-            self.heapifyMin(node.right)
-
-            if node.hasLeftChild() and node.hasRightChild():
-                smallest = min(node.left.data, node.right.data)
-                if smallest < node.data:
-                    if smallest == node.left.data:
-                        op.swap(node, node.left)
-                        self.heapifyMin(node.left)
-                    elif smallest == node.right.data:
-                        op.swap(node, node.right)
-                        self.heapifyMin(node.right)
-            elif node.hasLeftChild():
-                if node.data > node.left.data:
-                    op.swap(node, node.left)
-                    self.heapifyMin(node.left)
-            elif node.hasRightChild():
-                if node.data > node.right.data:
-                    op.swap(node, node.right)
-                    self.heapifyMin(node.right)

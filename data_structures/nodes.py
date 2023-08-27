@@ -40,7 +40,8 @@ class TreeNode(Node):
 
 class NodeOperations(object):
     # Swap values of two nodes
-    def swap(self, nodeOne, nodeTwo):
+    @staticmethod
+    def swap(nodeOne, nodeTwo):
         tempData = nodeOne.data
         nodeOne.data = nodeTwo.data
         nodeTwo.data = tempData
