@@ -1,7 +1,7 @@
 def edit_distance(word_one, word_two):
     n = len(word_one)
     m = len(word_two)
-    out = [[0 for x in range(n+1)] for y in range(m+1)]
+    out = [[0 for _ in range(n+1)] for _ in range(m+1)]
     
     for i in range(1, m+1):
         for j in range(1,n+1):

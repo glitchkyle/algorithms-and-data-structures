@@ -1,8 +1,9 @@
-from problems.dp.edit_distance import edit_distance
+from problems.dp.longest_common_substring import LongestCommonSubstring
+from problems.dp.maximum_increasing_subsequence import MaximumIncreasingSubsequence
+from problems.dp.count_patterns import CountPatterns
+from problems.dp.diff_utility import DiffUtility
 
-def main():
-    out = edit_distance("POLYNOMIAL", "EXPONENTIAL")
-    print(out)
+from unittest import main
 
 if __name__ == '__main__':
     main()
