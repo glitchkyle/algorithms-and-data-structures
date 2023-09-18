@@ -1,7 +1,7 @@
-from problems.dp.longest_common_substring import LongestCommonSubstring
-from problems.dp.maximum_increasing_subsequence import MaximumIncreasingSubsequence
-from problems.dp.count_patterns import CountPatterns
-from problems.dp.diff_utility import DiffUtility
+from problems.school.cs515.assignment2.double_knapsack import DoubleKnapsack
+from problems.school.cs515.assignment2.coin_change import CoinChange
+from problems.school.cs515.assignment2.equal_partition import EqualPartition
+from problems.school.cs515.assignment2.maximize_matrix_chain import MaximizeMatrixChain
 
 from unittest import main
 
