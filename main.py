@@ -1,7 +1,7 @@
-from problems.school.cs515.assignment2.double_knapsack import DoubleKnapsack
-from problems.school.cs515.assignment2.coin_change import CoinChange
-from problems.school.cs515.assignment2.equal_partition import EqualPartition
-from problems.school.cs515.assignment2.maximize_matrix_chain import MaximizeMatrixChain
+from problems.school.cs515.assignment3.modified_bellman_ford import ModifiedBellmanFord
+from problems.school.cs515.assignment3.modified_floyd_warshall import ModifiedFloydWarshall
+from problems.school.cs515.assignment3.minimum_cost_path import MinimumCostPath
+from problems.school.cs515.assignment3.longest_graph_sequence import LongestGraphSequence
 
 from unittest import main
 
