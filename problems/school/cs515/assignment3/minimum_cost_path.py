@@ -126,7 +126,7 @@ class MinimumCostPath(TestCase):
         only move one unit right or one unit down from any cell, i.e., from cell (i, j), we can move
         to (i, j+1) or (i+1, j).
 
-        Dijkstra's Algorithm: O(v^2) but O((v+e)log(v)) if priority queue is implemented
+        Dijkstra's Algorithm: O(e*log(v)) with priority queue
         """
 
         m, n = len(graph), len(graph[0])
