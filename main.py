@@ -1,4 +1,4 @@
-from problems.school.cs515.quiz3 import RobotPath
+from problems.school.cs515.quiz4 import TernarySearch
 
 from unittest import main
 
