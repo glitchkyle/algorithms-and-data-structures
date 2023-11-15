@@ -1,0 +1,35 @@
+Undirected vs. directed connectivity: 
+(a) Prove that in any connected undirected graph G = (V, E) there is a vertex v ∈ V whose removal leaves G connected. 
+(Hint: Consider the DFS search tree for G.) 
+
+Using the DFS algorithm on the connected undirected graph G, we will be able to mark visited vertices.
+If there are some unvisited vertices, we can say that there are multiple connected components.
+At that point, the removal of a vertex will leave G disconnected.
+This contradicts the first statement saying that G is a connected undirected graph.
+Therefore, if the graph is truly connected, then there is a vertex v ∈ V whose removal leaves G connected. 
+
+(b) Give an example of a strongly connected directed graph G = (V, E)
+such that, for every v ∈ V, removing v from G leaves a directed graph that is not strongly
+connected.
+
+Consider a directed graph G = (V, E) with four vertices and four edges:
+G = ({A, B, C, D}, {(A, B), (B, C), (C, D), (D, A)})
+
+In this graph, every vertex is part of a directed cycle. 
+If we remove any vertex, it will disconnect the graph because there will be no path to reach other vertices from any single vertex. 
+This ensures strong connectivity within the cycles, but removing any vertex will result in a directed graph that is not strongly connected.
+
+(c) In an undirected graph with 2 connected components it is always possible to
+make the graph connected by adding only one edge. Give an example of a directed graph
+with two strongly connected components such that no addition of one edge can make the
+graph strongly connected.
+
+Consider the directed graph G = (V, E) with six vertices and six edges:
+V = {1, 2, 3, 4, 5, 6}
+E = {(1, 2), (2, 3), (3, 1), (4, 5), (5, 6), (6, 4)}
+
+In this graph, there exist two strongly connected components: {1, 2, 3} and {4, 5, 6}. 
+These components form separate cycles, and there is no single edge that can be added to create a path covering all the vertices in both components. 
+Consequently, the graph cannot become strongly connected with the addition of a single directed edge.
+
+
